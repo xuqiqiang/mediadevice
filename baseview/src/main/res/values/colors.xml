@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="bg_white">#FFFFFF</color>
+    <color name="color_default_bg">#ffffffff</color>
+    
+    <color name="bbutton_danger">#ffd9534f</color>
+    <color name="bbutton_danger_edge">#ffd43f3a</color>
+    <color name="bbutton_danger_pressed">#ffd2322d</color>
+    <color name="bbutton_danger_pressed_edge">#ffac2925</color>
+    <color name="bbutton_danger_disabled">#a5d9534f</color>
+    <color name="bbutton_danger_disabled_edge">#a5d43f3a</color>
+    <color name="bbutton_info">#ff5bc0de</color>
+    <color name="bbutton_info_edge">#ff46b8da</color>
+    <color name="bbutton_info_pressed">#ff39b3d7</color>
+    <color name="bbutton_info_pressed_edge">#ff269abc</color>
+    <color name="bbutton_info_disabled">#a55bc0de</color>
+    <color name="bbutton_info_disabled_edge">#a546b8da</color>
+    <color name="bbutton_extra">#ff14d870</color>
+    <color name="bbutton_extra_edge">#ff20d475</color>
+    <color name="bbutton_extra_pressed">#ff59d7b3</color>
+    <color name="bbutton_extra_pressed_edge">#ff26bc9a</color>
+    <color name="bbutton_extra_disabled">#a57bdec0</color>
+    <color name="bbutton_extra_disabled_edge">#a546dab8</color>
+
+    <color name="base_title_bar_background">#177BE1</color>
+    
+    <color name="systembar_tint">#ff0067c9</color>
+    <!-- 描边颜色 -->
+    <color name="border_color">#ccc</color>
+    <color name="text_color_base">#333</color>
+    <color name="text_color_title">#666</color>
+
+    <color name="setting_menu_pressed_color_blue">#419DE4</color>
+
+    <color name="white">#ffffffff</color>
+
+    <color name="custom_edittext_hint">#99323232</color>
+    <color name="custom_edittext_normal">#ff323232</color>
+    <color name="custom_edittext_light_gray_hint">#ff8d8d8d</color>
+    <color name="custom_textview_policy_url_color">#ff1b67de</color>
+</resources>

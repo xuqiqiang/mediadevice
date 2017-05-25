@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:minWidth="280dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_dialog_bg_title"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/custom_dialog_ic_expand" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dip"
+            android:textColor="#FF000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_dialog_bg_middle"
+        android:gravity="center"
+        android:minHeight="100dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="300dip"
+            android:maxWidth="300dip"
+            android:padding="12dip"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="#FF000000"
+            android:textSize="20sp" />
+
+        <com.dftc.baseview.CustomDialogListView
+            android:id="@+id/select_list"
+            android:layout_width="300dip"
+            android:layout_height="400dip"
+            android:cacheColorHint="#00000000"
+            android:drawSelectorOnTop="false"
+            android:padding="8dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_dialog_bg_bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_dialog_positive_button"
+            android:padding="12dip"
+            android:singleLine="true"
+            android:text="@string/yes"
+            android:textColor="@color/bg_white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/custom_dialog_negative_button"
+            android:padding="12dip"
+            android:singleLine="true"
+            android:text="@string/no"
+            android:textColor="@color/bg_white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/extraButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/custom_dialog_extra_button"
+            android:padding="12dip"
+            android:singleLine="true"
+            android:text="@string/other"
+            android:textColor="@color/bg_white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

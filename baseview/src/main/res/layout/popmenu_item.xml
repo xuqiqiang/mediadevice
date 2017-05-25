@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/popmenu_textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popmenu_item_bg"
+        android:clickable="true"
+        android:drawablePadding="9.0dip"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dip"
+        android:paddingLeft="15dip"
+        android:paddingTop="12dip"
+        android:text=""
+        android:textColor="#FFFFFFFF"
+        android:textSize="17sp" />
+
+</LinearLayout>

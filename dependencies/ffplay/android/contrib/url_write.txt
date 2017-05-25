@@ -1,0 +1,137 @@
+Binary file ./ftp.o matches
+Binary file ./gopher.o matches
+Binary file ./teeproto.o matches
+Binary file ./file.o matches
+Binary file ./cache.o matches
+Binary file ./tls.o matches
+./rtspenc.c:171:        ffurl_write(rt->rtsp_hd_out, interleaved_packet, 4 + packet_len);
+./tls_openssl.c:113:    ret = ffurl_write(h, buf, len);
+./tls_openssl.c:339:    .url_write      = tls_write,
+./mmst.c:142:    write_result= ffurl_write(mms->mms_hd, mms->out_buffer, exact_length);
+Binary file ./mmsh.o matches
+./sctp.c:366:    .url_write           = sctp_write,
+./md5proto.c:77:        err = ffurl_write(out, buf, i*2+1);
+./md5proto.c:93:    .url_write           = md5_write,
+Binary file ./aviobuf.o matches
+Binary file ./udp.o matches
+Binary file ./md5proto.o matches
+./udp.c:1165:    .url_write           = udp_write,
+./udp.c:1177:    .url_write           = udp_write,
+Binary file ./rtpenc_chain.o matches
+./protocols.c:110:    if ((output && (*p)->url_write) || (!output && (*p)->url_read))
+Binary file ./mmst.o matches
+Binary file ./srtpproto.o matches
+./ftp.c:209:    if ((err = ffurl_write(s->conn_control, command, strlen(command))) < 0)
+./ftp.c:847:        written = ffurl_write(s->conn_data, buf, size);
+./ftp.c:1110:    .url_write           = ftp_write,
+./tls_securetransport.c:221:    int written = ffurl_write(c->tls_shared.tcp, data, *dataLength);
+./tls_securetransport.c:394:    .url_write      = tls_write,
+./tls_schannel.c:115:            ret = ffurl_write(s->tcp, outbuf.pvBuffer, outbuf.cbBuffer);
+./tls_schannel.c:236:                    ret = ffurl_write(c->tls_shared.tcp, outbuf[i].pvBuffer, outbuf[i].cbBuffer);
+./tls_schannel.c:319:    ret = ffurl_write(s->tcp, outbuf.pvBuffer, outbuf.cbBuffer);
+./tls_schannel.c:560:        ret = ffurl_write(s->tcp, data, len);
+./tls_schannel.c:596:    .url_write      = tls_write,
+./librtmp.c:346:    .url_write           = rtmp_write,
+./librtmp.c:361:    .url_write           = rtmp_write,
+./librtmp.c:376:    .url_write           = rtmp_write,
+./librtmp.c:391:    .url_write           = rtmp_write,
+./librtmp.c:406:    .url_write           = rtmp_write,
+Binary file ./mms.o matches
+./srtpproto.c:114:        return ffurl_write(s->rtp_hd, buf, size);
+./srtpproto.c:119:    return ffurl_write(s->rtp_hd, s->encryptbuf, size);
+./srtpproto.c:139:    .url_write                 = srtp_write,
+Binary file ./rtspdec.o matches
+./tls_gnutls.c:118:    int ret = ffurl_write(h, buf, len);
+./tls_gnutls.c:254:    .url_write      = tls_write,
+./libssh.c:496:    .url_write           = libssh_write,
+./rtpproto.c:546:    ret = ffurl_write(hd, buf, size);
+./rtpproto.c:614:    .url_write                 = rtp_write,
+./crypto.c:364:        ret = ffurl_write(c->hd, out_buf, out_size);
+./crypto.c:388:        if ((ret =  ffurl_write(c->hd, out_buf, BLOCKSIZE)) < 0)
+./crypto.c:404:    .url_write       = crypto_write,
+Binary file ./data_uri.o matches
+./url.h:78:    int     (*url_write)(URLContext *h, const unsigned char *buf, int size);
+./url.h:201:int ffurl_write(URLContext *h, const unsigned char *buf, int size);
+./unix.c:150:    .url_write           = unix_write,
+Binary file ./rtpproto.o matches
+Binary file ./sapdec.o matches
+Binary file ./tcp.o matches
+Binary file ./network.o matches
+Binary file ./icecast.o matches
+./avio.c~:91:    if ((flags & AVIO_FLAG_WRITE) && !up->url_write) {
+./avio.c~:423:int ffurl_write(URLContext *h, const unsigned char *buf, int size)
+./avio.c~:433:                                  h->prot->url_write);
+Binary file ./async.o matches
+Binary file ./librtmp.o matches
+./tcp.c:558:    .url_write           = tcp_write,
+./libavformat.v:14:        ffurl_write;
+./aviobuf.c:848:    return ffurl_write(internal->h, buf, buf_size);
+Binary file ./http.o matches
+./sapenc.c:59:        ffurl_write(sap->ann_fd, sap->ann, sap->ann_size);
+./sapenc.c:255:        int ret = ffurl_write(sap->ann_fd, sap->ann, sap->ann_size);
+./rtmpcrypt.c:307:    if ((ret = ffurl_write(rt->stream, buf, size)) < 0)
+./rtmpcrypt.c:332:    .url_write       = rtmpe_write,
+Binary file ./avio.o matches
+Binary file ./rtsp.o matches
+./rtmpproto.c:1270:    if ((ret = ffurl_write(rt->stream, tosend,
+./rtmpproto.c:1366:        if ((ret = ffurl_write(rt->stream, tosend,
+./rtmpproto.c:1390:        if ((ret = ffurl_write(rt->stream, serverdata + 1,
+./rtmpproto.c:1432:    inoutsize = ffurl_write(rt->stream, arraydata,
+./rtmpproto.c:1468:    if (ffurl_write(rt->stream, buffer, 1) <= 0) {                 // Send S0
+./rtmpproto.c:3148:    .url_write      = rtmp_write,                \
+./rtmphttp.c:280:    .url_write      = rtmp_http_write,
+Binary file ./hlsproto.o matches
+./http.c:414:    if ((ret = ffurl_write(s->hd, message, message_len)) < 0)
+./http.c:1141:    if ((err = ffurl_write(s->hd, s->buffer, strlen(s->buffer))) < 0)
+./http.c:1145:        if ((err = ffurl_write(s->hd, s->post_data, s->post_datalen)) < 0)
+./http.c:1432:        return ffurl_write(s->hd, buf, size);
+./http.c:1441:        if ((ret = ffurl_write(s->hd, temp, strlen(temp))) < 0 ||
+./http.c:1442:            (ret = ffurl_write(s->hd, buf, size)) < 0          ||
+./http.c:1443:            (ret = ffurl_write(s->hd, crlf, sizeof(crlf) - 1)) < 0)
+./http.c:1458:        ret = ffurl_write(s->hd, footer, sizeof(footer) - 1);
+./http.c:1568:    .url_write           = http_write,
+./http.c:1587:    .url_write           = http_write,
+./http.c:1655:    if ((ret = ffurl_write(s->hd, s->buffer, strlen(s->buffer))) < 0)
+./http.c:1697:    return ffurl_write(s->hd, buf, size);
+./http.c:1704:    .url_write           = http_proxy_write,
+Binary file ./rtpdec.o matches
+./gopher.c:38:    return ffurl_write(s->hd, buf, size);
+./gopher.c:121:    .url_write      = gopher_write,
+Binary file ./concat.o matches
+Binary file ./ijkutils.o matches
+Binary file ./libavformat.a matches
+Binary file ./crypto.o matches
+./icecast.c:202:    return ffurl_write(s->hd, buf, size);
+./icecast.c:215:    .url_write       = icecast_write,
+Binary file ./movenchint.o matches
+./rtsp.c:1252:        ffurl_write(rt->rtsp_hd_out, ptr, strlen(ptr));
+./rtsp.c:1342:    ffurl_write(rt->rtsp_hd_out, out_buf, strlen(out_buf));
+./rtsp.c:1349:        ffurl_write(rt->rtsp_hd_out, send_content, send_content_length);
+./avio.c:91:    if ((flags & AVIO_FLAG_WRITE) && !up->url_write) {
+./avio.c:425:int ffurl_write(URLContext *h, const unsigned char *buf, int size)
+./avio.c:427:printf("ffurl_write 0");
+./avio.c:430:printf("ffurl_write 1");
+./avio.c:434:printf("ffurl_write 2");
+./avio.c:437:                                  h->prot->url_write);
+./smoothstreamingenc.c:86:        ffurl_write(os->out, buf, buf_size);
+./smoothstreamingenc.c:88:        ffurl_write(os->out2, buf, buf_size);
+./teeproto.c:58:        int ret = ffurl_write(c->child[i].url_context, buf, size);
+./teeproto.c:142:    .url_write           = tee_write,
+./rtpdec.c:371:        result = ffurl_write(fd, buf, len);
+./rtpdec.c:372:        av_log(s->ic, AV_LOG_TRACE, "result from ffurl_write: %d\n", result);
+./rtpdec.c:397:        ffurl_write(rtp_handle, buf, len);
+./rtpdec.c:412:        ffurl_write(rtp_handle, buf, len);
+./rtpdec.c:504:        ffurl_write(fd, buf, len);
+Binary file ./unix.o matches
+./rtspdec.c:122:    ffurl_write(rt->rtsp_hd_out, message, strlen(message));
+Binary file ./subfile.o matches
+Binary file ./protocols.o matches
+./libsmbclient.c:372:    .url_write           = libsmbc_write,
+./file.c:344:    .url_write           = file_write,
+./file.c:390:    .url_write           = file_write,
+./rtmppkt.c:377:    if ((ret = ffurl_write(h, pkt_hdr, p - pkt_hdr)) < 0)
+./rtmppkt.c:382:        if ((ret = ffurl_write(h, pkt->data + off, towrite)) < 0)
+./rtmppkt.c:387:            if ((ret = ffurl_write(h, &marker, 1)) < 0)
+./rtmppkt.c:393:                if ((ret = ffurl_write(h, ts_header, 4)) < 0)
+Binary file ./tls_openssl.o matches
+Binary file ./rtpdec_asf.o matches

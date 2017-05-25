@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MediaDevice</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    //Exception messages
+    <string name="exception_message_generic">There was an application error</string>
+    <string name="exception_message_no_connection">There is no internet connection</string>
+    <string name="exception_message_camera_not_found">Cannot retrieve camera data. Check your internet connection</string>
+
+    <string name="input_account">Enter name:</string>
+    <string name="input_password">Enter password:</string>
+
+    <string name="input_empty">Enter null</string>
+
+    <string name="dialog_add_camera">Add Camera</string>
+    <string name="input_ip_addr">Enter ip address:</string>
+    <string name="input_ip_port">Enter ip port:</string>
+
+    <string name="help_set">settings</string>
+    <string name="help_set_account">Account</string>
+    <string name="help_set_main_rate">Main rate</string>
+    <string name="help_set_software">Software settings</string>
+    <string name="help_set_feedback">Feedback</string>
+    <string name="help_set_score">Score</string>
+    <string name="help_set_about">About</string>
+    <string name="help_set_updata">Update</string>
+    <string name="help_set_share">Share</string>
+    <string name="help_set_find">Found</string>
+
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="button_rounded_corner_radius">5dp</dimen>
+    
+    <dimen name="popmenu_width">172.0dip</dimen>
+    <dimen name="popmenu_yoff">5.0dip</dimen>
+
+</resources>

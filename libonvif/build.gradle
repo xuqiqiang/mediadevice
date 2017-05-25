@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+//        ndk {
+//            moduleName "OnvifImplement"
+//            stl "stlport_static"
+//            cFlags "-DWITH_NONAMESPACES  -DDEBUG_PRINT -DWITH_DOM -lz -lm -DDEBUG"
+//            ldLibs "log", "z", "m"
+//        }
+    }
+    sourceSets{
+        main{
+            jni.srcDirs=[]
+        }
+    }
+
+//    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            jniDebuggable true
+        }
+    }
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
+}

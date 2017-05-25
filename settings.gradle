@@ -1,0 +1,1 @@
+include ':app', ':baseview', ':domain', ':data', ':libonvif', ':onvif', ':ijkplayer'

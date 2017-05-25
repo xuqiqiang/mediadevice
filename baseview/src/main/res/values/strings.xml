@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="help_set_theme">Themes</string>
+	<string name="help_set_prompt_theme_refresh">Effective immediately?</string>
+	<string name="about">About</string>
+	<!-- ================ 对话框 ================ -->
+
+	<string name="option">Options</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Cancel</string>
+	<string name="back">Return</string>
+	<string name="other">Other</string>
+	<string name="send">Send</string>
+</resources>

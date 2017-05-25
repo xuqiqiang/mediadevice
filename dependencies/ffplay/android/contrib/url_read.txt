@@ -1,0 +1,186 @@
+./bluray.c:231:    .url_read        = bluray_read,
+Binary file ./ftp.o matches
+Binary file ./gopher.o matches
+Binary file ./teeproto.o matches
+Binary file ./file.o matches
+./concat.c:137:        result = ffurl_read(nodes[i].uc, buf, size);
+./concat.c:192:    .url_read       = concat_read,
+Binary file ./cache.o matches
+Binary file ./tls.o matches
+./tls_openssl.c:99:    ret = ffurl_read(h, buf, len);
+./tls_openssl.c:338:    .url_read       = tls_read,
+./mmst.c:251:        read_result = ffurl_read_complete(mms->mms_hd, mms->in_buffer, 8);
+./mmst.c:271:            read_result= ffurl_read_complete(mms->mms_hd, mms->in_buffer+8, 4);
+./mmst.c:291:            read_result = ffurl_read_complete(mms->mms_hd, mms->in_buffer + 12,
+./mmst.c:329:            read_result= ffurl_read_complete(mms->mms_hd, mms->in_buffer, length_remaining);
+./mmst.c:635:    .url_read       = mms_read,
+Binary file ./mmsh.o matches
+./sctp.c:365:    .url_read            = sctp_read,
+Binary file ./aviobuf.o matches
+./data_uri.c:116:    .url_read       = data_read,
+Binary file ./udp.o matches
+Binary file ./md5proto.o matches
+./cache.c:203:    r = ffurl_read(c->inner, buf, size);
+./cache.c:325:    .url_read            = cache_read,
+./udp.c:1164:    .url_read            = udp_read,
+./udp.c:1176:    .url_read            = udp_read,
+Binary file ./rtpenc_chain.o matches
+./protocols.c:110:    if ((output && (*p)->url_write) || (!output && (*p)->url_read))
+Binary file ./mmst.o matches
+Binary file ./srtpproto.o matches
+./ftp.c:97:        len = ffurl_read(s->conn_control, s->control_buffer, CONTROL_BUFFER_SIZE);
+./ftp.c:794:        read = ffurl_read(s->conn_data, buf, size);
+./ftp.c:1007:            ret = ffurl_read(s->conn_data, s->dir_buffer + s->dir_buffer_size, DIR_BUFFER_SIZE - (s->dir_buffer_size + 1));
+./ftp.c:1109:    .url_read            = ftp_read,
+./ftp.c:1118:    .url_read_dir        = ftp_read_dir,
+./tls_securetransport.c:196:    int read = ffurl_read_complete(c->tls_shared.tcp, data, *dataLength);
+./tls_securetransport.c:393:    .url_read       = tls_read,
+./tls_schannel.c:184:            ret = ffurl_read(c->tls_shared.tcp, c->enc_buf + c->enc_buf_offset,
+./tls_schannel.c:414:        ret = ffurl_read(s->tcp, c->enc_buf + c->enc_buf_offset,
+./tls_schannel.c:595:    .url_read       = tls_read,
+./librtmp.c:345:    .url_read            = rtmp_read,
+./librtmp.c:348:    .url_read_pause      = rtmp_read_pause,
+./librtmp.c:349:    .url_read_seek       = rtmp_read_seek,
+./librtmp.c:360:    .url_read            = rtmp_read,
+./librtmp.c:363:    .url_read_pause      = rtmp_read_pause,
+./librtmp.c:364:    .url_read_seek       = rtmp_read_seek,
+./librtmp.c:375:    .url_read            = rtmp_read,
+./librtmp.c:378:    .url_read_pause      = rtmp_read_pause,
+./librtmp.c:379:    .url_read_seek       = rtmp_read_seek,
+./librtmp.c:390:    .url_read            = rtmp_read,
+./librtmp.c:393:    .url_read_pause      = rtmp_read_pause,
+./librtmp.c:394:    .url_read_seek       = rtmp_read_seek,
+./librtmp.c:405:    .url_read            = rtmp_read,
+./librtmp.c:408:    .url_read_pause      = rtmp_read_pause,
+./librtmp.c:409:    .url_read_seek       = rtmp_read_seek,
+Binary file ./mms.o matches
+./srtpproto.c:102:    ret = ffurl_read(s->rtp_hd, buf, size);
+./srtpproto.c:138:    .url_read                  = srtp_read,
+Binary file ./rtspdec.o matches
+./tls_gnutls.c:105:    int ret = ffurl_read(h, buf, len);
+./tls_gnutls.c:253:    .url_read       = tls_read,
+./libssh.c:495:    .url_read            = libssh_read,
+./libssh.c:502:    .url_read_dir        = libssh_read_dir,
+./rtpproto.c:613:    .url_read                  = rtp_read,
+./crypto.c:205:        int n = ffurl_read(c->hd, c->inbuffer + c->indata,
+./crypto.c:403:    .url_read        = crypto_read,
+Binary file ./data_uri.o matches
+./url.h:77:    int     (*url_read)( URLContext *h, unsigned char *buf, int size);
+./url.h:81:    int (*url_read_pause)(URLContext *h, int pause);
+./url.h:82:    int64_t (*url_read_seek)(URLContext *h, int stream_index,
+./url.h:93:    int (*url_read_dir)(URLContext *h, AVIODirEntry **next);
+./url.h:184:int ffurl_read(URLContext *h, unsigned char *buf, int size);
+./url.h:193:int ffurl_read_complete(URLContext *h, unsigned char *buf, int size);
+./unix.c:149:    .url_read            = unix_read,
+Binary file ./rtpproto.o matches
+Binary file ./sapdec.o matches
+Binary file ./tcp.o matches
+Binary file ./network.o matches
+./sapdec.c:98:        ret = ffurl_read(sap->ann_fd, recvbuf, sizeof(recvbuf) - 1);
+./sapdec.c:205:        ret = ffurl_read(sap->ann_fd, recvbuf, sizeof(recvbuf));
+Binary file ./icecast.o matches
+./avio.c~:86:    if ((flags & AVIO_FLAG_READ) && !up->url_read) {
+./avio.c~:409:int ffurl_read(URLContext *h, unsigned char *buf, int size)
+./avio.c~:413:    return retry_transfer_wrapper(h, buf, size, 1, h->prot->url_read);
+./avio.c~:416:int ffurl_read_complete(URLContext *h, unsigned char *buf, int size)
+./avio.c~:420:    return retry_transfer_wrapper(h, buf, size, size, h->prot->url_read);
+./avio.c~:557:    if (h->prot->url_open_dir && h->prot->url_read_dir && h->prot->url_close_dir) {
+./avio.c~:587:    if ((ret = h->prot->url_read_dir(h, next)) < 0)
+Binary file ./async.o matches
+Binary file ./librtmp.o matches
+./tcp.c:557:    .url_read            = tcp_read,
+./aviobuf.c:842:    return ffurl_read(internal->h, buf, buf_size);
+./aviobuf.c:860:    if (!internal->h->prot->url_read_pause)
+./aviobuf.c:862:    return internal->h->prot->url_read_pause(internal->h, pause);
+./aviobuf.c:868:    if (!internal->h->prot->url_read_seek)
+./aviobuf.c:870:    return internal->h->prot->url_read_seek(internal->h, stream_index, timestamp, flags);
+Binary file ./http.o matches
+./rtmpcrypt.c:283:    ret = ffurl_read(rt->stream, buf, size);
+./rtmpcrypt.c:331:    .url_read        = rtmpe_read,
+Binary file ./avio.o matches
+Binary file ./rtsp.o matches
+./rtmpproto.c:1167:    if ((ret = ffurl_read_complete(stream, in_data, in_size)) < 0)
+./rtmpproto.c:1276:    if ((ret = ffurl_read_complete(rt->stream, serverdata,
+./rtmpproto.c:1282:    if ((ret = ffurl_read_complete(rt->stream, clientdata,
+./rtmpproto.c:1410:    inoutsize = ffurl_read_complete(rt->stream, arraydata,
+./rtmpproto.c:1458:    inoutsize = ffurl_read_complete(rt->stream, buffer, 1);       // Receive C0
+./rtmpproto.c:3078:    ret = ffurl_read(rt->stream, &c, 1);
+./rtmpproto.c:3145:    .url_read       = rtmp_read,                 \
+./rtmpproto.c:3146:    .url_read_seek  = rtmp_seek,                 \
+./rtmpproto.c:3147:    .url_read_pause = rtmp_pause,                \
+./rtmphttp.c:76:    if ((ret = ffurl_read(rt->stream, &c, 1)) < 0)
+./rtmphttp.c:112:        ret = ffurl_read(rt->stream, buf + off, size);
+./rtmphttp.c:237:        ret = ffurl_read(rt->stream, rt->client_id + off, sizeof(rt->client_id) - off);
+./rtmphttp.c:279:    .url_read       = rtmp_http_read,
+./mmsh.c:83:    res = ffurl_read_complete(mms->mms_hd, chunk_header, CHUNK_HEADER_LENGTH);
+./mmsh.c:105:    res = ffurl_read_complete(mms->mms_hd, ext_header, ext_header_len);
+./mmsh.c:126:    res = ffurl_read_complete(mms->mms_hd, mms->in_buffer, len);
+./mmsh.c:178:            res = ffurl_read_complete(mms->mms_hd, mms->asf_header, len);
+./mmsh.c:201:                res = ffurl_read_complete(mms->mms_hd, mms->in_buffer, len);
+./mmsh.c:415:    .url_read       = mmsh_read,
+./mmsh.c:418:    .url_read_seek  = mmsh_read_seek,
+Binary file ./hlsproto.o matches
+./http.c:561:        len = ffurl_read(s->hd, s->buffer, BUFFER_SIZE);
+./http.c:1214:            len = ffurl_read(s->hd, buf, len);
+./http.c:1567:    .url_read            = http_read,
+./http.c:1586:    .url_read            = http_read,
+./http.c:1667:     * Reading that requires using the proper ffurl_read() function
+./http.c:1703:    .url_read            = http_buf_read,
+Binary file ./rtpdec.o matches
+./hlsproto.c:266:        ret = ffurl_read(s->seg_hd, buf, size);
+./hlsproto.c:324:    .url_read       = hls_read,
+./gopher.c:112:    int len = ffurl_read(s->hd, buf, size);
+./gopher.c:120:    .url_read       = gopher_read,
+Binary file ./concat.o matches
+Binary file ./ijkutils.o matches
+Binary file ./libavformat.a matches
+Binary file ./crypto.o matches
+Binary file ./movenchint.o matches
+./rtsp.c:1129:    ret = ffurl_read_complete(rt->rtsp_hd, buf, 3);
+./rtsp.c:1141:        ret = ffurl_read_complete(rt->rtsp_hd, buf, len1);
+./rtsp.c:1170:            ret = ffurl_read_complete(rt->rtsp_hd, &ch, 1);
+./rtsp.c:1223:        ffurl_read_complete(rt->rtsp_hd, content, content_length);
+./rtsp.c:1978:                        ret = ffurl_read(rtsp_st->rtp_handle, buf, buf_size);
+./rtsp.c:2413:        ret = ffurl_read(in, recvbuf, sizeof(recvbuf));
+./avio.c:86:    if ((flags & AVIO_FLAG_READ) && !up->url_read) {
+./avio.c:411:int ffurl_read(URLContext *h, unsigned char *buf, int size)
+./avio.c:415:    return retry_transfer_wrapper(h, buf, size, 1, h->prot->url_read);
+./avio.c:418:int ffurl_read_complete(URLContext *h, unsigned char *buf, int size)
+./avio.c:422:    return retry_transfer_wrapper(h, buf, size, size, h->prot->url_read);
+./avio.c:561:    if (h->prot->url_open_dir && h->prot->url_read_dir && h->prot->url_close_dir) {
+./avio.c:591:    if ((ret = h->prot->url_read_dir(h, next)) < 0)
+./async.c:164:static int wrapped_url_read(void *src, void *dst, int size)
+./async.c:170:    ret = ffurl_read(c->inner, dst, size);
+./async.c:224:        ret = ring_generic_write(ring, (void *)h, to_copy, wrapped_url_read);
+./async.c:485:    .url_read            = async_read,
+./async.c:587:    .url_read            = async_test_read,
+./async.c:620:        ret = ffurl_read(h, buf, sizeof(buf));
+./async.c:648:    ret = ffurl_read(h, buf, 1);
+./async.c:656:        ret = ffurl_read(h, buf, sizeof(buf));
+./async.c:679:    ret = ffurl_read(h, buf, 1);
+./async.c:690:    ret = ffurl_read(h, buf, 1);
+Binary file ./unix.o matches
+./rtspdec.c:84:        ret = ffurl_read_complete(rt->rtsp_hd, rbuf + idx, 1);
+./rtspdec.c:194:        if (ffurl_read_complete(rt->rtsp_hd, sdp, request.content_length)
+./rtspdec.c:777:    ret = ffurl_read_complete(rt->rtsp_hd, buf, 3);
+./rtspdec.c:786:    ret = ffurl_read_complete(rt->rtsp_hd, buf, len);
+Binary file ./subfile.o matches
+Binary file ./protocols.o matches
+./libsmbclient.c:371:    .url_read            = libsmbc_read,
+./libsmbclient.c:378:    .url_read_dir        = libsmbc_read_dir,
+./subfile.c:107:    ret = ffurl_read(c->h, buf, size);
+./subfile.c:143:    .url_read            = subfile_read,
+./file.c:343:    .url_read            = file_read,
+./file.c:354:    .url_read_dir        = file_read_dir,
+./file.c:389:    .url_read            = file_read,
+./rtmppkt.c:164:    if (ffurl_read(h, &hdr, 1) != 1)
+./rtmppkt.c:190:        if (ffurl_read_complete(h, buf, channel_id + 1) != channel_id + 1)
+./rtmppkt.c:207:        if (ffurl_read_complete(h, buf, 3) != 3)
+./rtmppkt.c:212:            if (ffurl_read_complete(h, buf, 3) != 3)
+./rtmppkt.c:216:            if (ffurl_read_complete(h, buf, 1) != 1)
+./rtmppkt.c:221:                if (ffurl_read_complete(h, buf, 4) != 4)
+./rtmppkt.c:229:        if (ffurl_read_complete(h, buf, 4) != 4)
+./rtmppkt.c:269:    if (ffurl_read_complete(h, p->data + p->offset, toread) != toread) {
+./rtmppkt.c:300:        if (ffurl_read(h, &hdr, 1) != 1)
+Binary file ./tls_openssl.o matches
+Binary file ./rtpdec_asf.o matches

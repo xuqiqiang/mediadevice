@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6"
+    android:orientation="vertical">
+
+
+    <com.dftc.baseview.ElasticScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textview_title"
+                android:layout_marginTop="4dp"
+                android:text="MediaDevice settings" />
+
+            <LinearLayout style="@style/linearlayout_out">
+
+                <!-- 上圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_account"
+                    style="@style/linearlayout_top">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_account" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+
+                <!-- 分割线 -->
+
+                <View style="@style/bg_line" />
+
+                <!-- 无圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_main_rate"
+                    style="@style/linearlayout_mid">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_main_rate" />
+
+                    <CheckBox
+                        android:id="@+id/setting_cb_main_rate"
+                        style="@style/checkbox_base" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <!-- 下圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_more"
+                    style="@style/linearlayout_bottom">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="More" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/textview_title"
+                android:text="@string/help_set_software" />
+
+            <LinearLayout style="@style/linearlayout_out">
+
+                <!-- 上圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_feedback"
+                    style="@style/linearlayout_top">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_feedback" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+
+                <!-- 分割线 -->
+
+                <View style="@style/bg_line" />
+
+                <!-- 无圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_updata"
+                    style="@style/linearlayout_mid">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_updata" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+
+                <!-- 分割线 -->
+
+                <View style="@style/bg_line" />
+
+                <!-- 无圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_share"
+                    style="@style/linearlayout_mid">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_share" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+
+                <!-- 分割线 -->
+
+                <View style="@style/bg_line" />
+
+                <!-- 无圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_score"
+                    style="@style/linearlayout_mid">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_score" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+
+                <!-- 分割线 -->
+
+                <View style="@style/bg_line" />
+
+                <!-- 下圆角 -->
+
+                <LinearLayout
+                    android:id="@+id/setting_find"
+                    style="@style/linearlayout_bottom">
+
+                    <TextView
+                        style="@style/textview_full"
+                        android:text="@string/help_set_about" />
+
+                    <ImageView style="@style/imageview_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.dftc.baseview.ElasticScrollView>
+
+
+</LinearLayout>

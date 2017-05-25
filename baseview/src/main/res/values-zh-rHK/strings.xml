@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="help_set_theme">主題風格</string>
+	<string name="help_set_prompt_theme_refresh">是否立即生效?</string>
+	<string name="about">關於</string>
+	<!-- ================ 對話框 ================ -->
+	<string name="option">選項</string>
+	<string name="yes">是</string>
+	<string name="no">否</string>
+	<string name="ok">確定</string>
+	<string name="cancel">取消</string>
+	<string name="back">返回</string>
+	<string name="other">其他</string>
+	<string name="send">發送</string>
+	
+</resources>

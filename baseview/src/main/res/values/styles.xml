@@ -1,0 +1,132 @@
+<resources>
+
+	<style name="AnimationActivity">
+        <item name="android:activityOpenEnterAnimation">@anim/right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item>
+    </style>
+
+    <style name="AnimationFadeActivity">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
+    
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 最外层样式 -->
+    <style name="linearlayout_out">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:padding">1px</item>
+        <item name="android:background">@drawable/shape_ellipse</item>
+
+    </style>
+
+    <!-- 共用层样式 -->
+    <style name="linearlayout_base">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- 上圆角样式 -->
+    <style name="linearlayout_top" parent="linearlayout_base">
+        <item name="android:background">@drawable/linearlayout_top_selector</item>
+    </style>
+
+    <!--无圆角样式  -->
+    <style name="linearlayout_mid" parent="linearlayout_base">
+        <item name="android:background">@drawable/linearlayout_mid_selector</item>
+    </style>
+
+    <!-- 下圆角样式 -->
+    <style name="linearlayout_bottom"  parent="linearlayout_base">
+        <item name="android:background">@drawable/linearlayout_bottom_selector</item>
+    </style>
+
+    <!-- 全圆角样式 -->
+    <style name="linearlayout_single" parent="linearlayout_base">
+        <item name="android:background">@drawable/linearlayout_single_selector</item>
+    </style>
+
+
+    <!-- textview样式 -->
+    <style name="textview_base">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_base</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="textview_full" parent="textview_base">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="textview_title" parent="textview_base">
+        <item name="android:textColor">@color/text_color_title</item>
+        <item name="android:layout_marginLeft">12dp</item>
+    </style>
+
+    <!-- 文本右边箭头样式 -->
+    <style name="imageview_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/setting_arrow</item>
+    </style>
+
+    <!-- view分割线样式 -->
+    <style name="bg_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/border_color</item>
+    </style>
+
+    <!-- CheckBox样式 -->
+    <style name="checkbox_base" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CustomEditText">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/custom_edittext_normal</item>
+        <item name="android:textColorHint">@color/custom_edittext_hint</item>
+        <item name="android:gravity">left</item>
+        <item name="android:background">@drawable/custom_edittext_bg</item>
+        <item name="android:paddingLeft">7.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:paddingTop">3.0dip</item>
+        <item name="android:paddingBottom">3.0dip</item>
+        <item name="android:singleLine">@color/custom_edittext_light_gray_hint</item>
+    </style>
+
+    <style name="CustomEditText.Password" parent="@style/CustomEditText">
+        <item name="android:maxLength">20</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+</resources>

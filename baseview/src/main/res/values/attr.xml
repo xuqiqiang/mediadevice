@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+        <attr name="fab_layout_height" format="dimension" />
+        <attr name="fab_drawable" format="reference" />
+        <attr name="fab_drawablePadding" format="dimension" />
+        <attr name="fab_isPassword" format="boolean" />
+        <attr name="fab_hint" format="string" />
+        <attr name="fab_imeAction">
+            <enum name="imeActionDefault" value="0" />
+            <enum name="imeActionNext" value="1" />
+            <enum name="imeActionGo" value="2" />
+        </attr>
+        <attr name="fab_onTop" format="boolean" />
+    </declare-styleable>
+
+</resources>
