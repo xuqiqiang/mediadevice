@@ -47,7 +47,7 @@ class CloudCameraDataStore implements CameraDataStore {
     }
 
     @Override
-    public Observable<CameraDevice> cameraDevice(String cameraIP, int cameraPort, boolean mainRate) {
+    public Observable<CameraDevice> cameraDevice(String cameraIP, Integer cameraPort, boolean mainRate) {
         return this.restApi.cameraDevice(cameraIP, cameraPort, mainRate);
     }
 

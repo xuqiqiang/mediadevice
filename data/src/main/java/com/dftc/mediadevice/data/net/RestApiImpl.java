@@ -100,7 +100,7 @@ public class RestApiImpl implements RestApi {
     }
 
     @Override
-    public Observable<CameraDevice> cameraDevice(String cameraIP, int cameraPort, boolean mainRate) {
+    public Observable<CameraDevice> cameraDevice(String cameraIP, Integer cameraPort, boolean mainRate) {
         return Observable.create(emitter -> {
             Log.d(TAG, "cameraDevice");
             if (isThereInternetConnection()) {

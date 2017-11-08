@@ -30,7 +30,7 @@ public class HttpSoap {
     public static final String PASSWORD = "888888";
 
     public static final String DEVICE_UUID = "386d43c9-1787-49f8-bfb4-11280f7579d9";
-    public static final String DEVICE_URL = "http://%s:%d/onvif/device_service";
+    public static final String DEVICE_URL = "http://%s/onvif/device_service";
 
     public static final String GET_SUBSERVICE_POST = "<?xml version=\"1.0\" encoding=\"utf-8\"?><s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><GetServices xmlns=\"http://www.onvif.org/ver10/device/wsdl\"><IncludeCapability>false</IncludeCapability></GetServices></s:Body></s:Envelope>";
     public static final String IS_NEED_AUTH = "<?xml version=\"1.0\" encoding=\"utf-8\"?><s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><GetClientCertificateMode xmlns=\"http://www.onvif.org/ver10/device/wsdl\"></GetClientCertificateMode></s:Body></s:Envelope>";
@@ -50,8 +50,11 @@ public class HttpSoap {
     public HttpSoap() {
     }
 
-    private void initConn(String cameraIP, int cameraPort, boolean mainRate) {
-        String url = String.format(DEVICE_URL, cameraIP, cameraPort);
+    private void initConn(String cameraIP, Integer cameraPort, boolean mainRate) {
+        String ipAddr = cameraIP;
+        if (cameraPort != null)
+            ipAddr += ":" + cameraPort;
+        String url = String.format(DEVICE_URL, ipAddr);
         mCamera = new CameraDevice(UUID.fromString(DEVICE_UUID), url,
                 mainRate);
         mCamera.setOnline(true);
@@ -131,7 +134,7 @@ public class HttpSoap {
         }
     }
 
-    public CameraDevice cameraDevice(String cameraIP, int cameraPort, boolean mainRate) {
+    public CameraDevice cameraDevice(String cameraIP, Integer cameraPort, boolean mainRate) {
         initConn(cameraIP, cameraPort, mainRate);
         try {
             // =========获取子服务=========
@@ -298,17 +301,6 @@ public class HttpSoap {
         return "";
     }
 
-    class TProfile {
-        public String token;
-        public int width;
-        public int height;
-        public int FrameRateLimit;
-
-        public TProfile(String token) {
-            this.token = token;
-        }
-    }
-
     private String getOldProfileToken(String xml) {
         Log.d("xqq", "getOldProfileToken xml:" + xml);
         writeTXT(new File("/sdcard/log_getOldProfileToken.xml"), xml);
@@ -469,5 +461,16 @@ public class HttpSoap {
         }
 
         return false;
+    }
+
+    class TProfile {
+        public String token;
+        public int width;
+        public int height;
+        public int FrameRateLimit;
+
+        public TProfile(String token) {
+            this.token = token;
+        }
     }
 }

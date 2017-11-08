@@ -37,7 +37,7 @@ public interface CameraDataStore {
      *
      * @param cameraIP, cameraPort, mainRate The id to retrieve user data.
      */
-    Observable<CameraDevice> cameraDevice(String cameraIP, int cameraPort, boolean mainRate);
+    Observable<CameraDevice> cameraDevice(String cameraIP, Integer cameraPort, boolean mainRate);
 
     Observable<Boolean> cameraDevice(CameraDevice device);
 

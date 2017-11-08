@@ -39,7 +39,7 @@ public interface CameraRepository {
      *
      * @param cameraIP, cameraPort, mainRate The camera id used to retrieve camera data.
      */
-    Observable<CameraDevice> cameraDevice(String cameraIP, int cameraPort, boolean mainRate);
+    Observable<CameraDevice> cameraDevice(String cameraIP, Integer cameraPort, boolean mainRate);
 
     Observable<Boolean> cameraDevice(CameraDevice device);
 

@@ -50,16 +50,16 @@ public class ConnectCameraDevice extends UseCase<CameraDevice, ConnectCameraDevi
     public static final class Params {
 
         private final String cameraIP;
-        private final int cameraPort;
+        private final Integer cameraPort;
         private final boolean mainRate;
 
-        private Params(String cameraIP, int cameraPort, boolean mainRate) {
+        private Params(String cameraIP, Integer cameraPort, boolean mainRate) {
             this.cameraIP = cameraIP;
             this.cameraPort = cameraPort;
             this.mainRate = mainRate;
         }
 
-        public static Params forUser(String cameraIP, int cameraPort, boolean mainRate) {
+        public static Params forUser(String cameraIP, Integer cameraPort, boolean mainRate) {
             return new Params(cameraIP, cameraPort, mainRate);
         }
     }

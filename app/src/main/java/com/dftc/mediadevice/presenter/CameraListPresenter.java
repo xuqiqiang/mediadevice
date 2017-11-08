@@ -62,9 +62,6 @@ import static com.dftc.mediadevice.data.cache.Cache.readString;
 public class CameraListPresenter implements Presenter {
 
     private final static String TAG = "CameraListPresenter";
-
-    private CameraListView viewListView;
-
     private final GetCameraList getCameraListUseCase;
     private final ConnectCameraDevice connectCameraDeviceUseCase;
     private final DisconnectCameraDevice disconnectCameraDeviceUseCase;
@@ -75,7 +72,7 @@ public class CameraListPresenter implements Presenter {
     private final GetCameraSrceenshot getCameraSrceenshotUseCase;
     private final CameraModelDataMapper cameraModelDataMapper;
     private final RtmpServUrlMapper rtmpServUrlMapper;
-
+    private CameraListView viewListView;
     private CameraModel mSelectCamera;
     private CameraDevice mCameraDevice;
     private Integer mSerId = -1;

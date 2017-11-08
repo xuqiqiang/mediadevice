@@ -23,7 +23,7 @@ import android.graphics.Bitmap;
 public class CameraModel {
 
     private String mIP;
-    private int mPort;
+    private Integer mPort;
     private String mUUID;
 
     private Bitmap screenshot;
@@ -31,7 +31,7 @@ public class CameraModel {
     public static final int STATUS_DISCONNECT = 0, STATUS_CONNECTING = 1, STATUS_CONNECTED = 2;
     private int mStatus = STATUS_DISCONNECT;
 
-    public CameraModel(String ip, int port, String uuid) {
+    public CameraModel(String ip, Integer port, String uuid) {
         mIP = ip;
         mPort = port;
         mUUID = uuid;
@@ -41,7 +41,7 @@ public class CameraModel {
         return mIP;
     }
 
-    public int getPort() {
+    public Integer getPort() {
         return mPort;
     }
 

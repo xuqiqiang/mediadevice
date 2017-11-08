@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2015 Fernando Cejas Open Source Project
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,12 +15,16 @@
  */
 package com.dftc.mediadevice.data.mapper;
 
+import android.text.TextUtils;
+
 import com.dftc.libonvif.model.CameraInfomation;
+import com.dftc.mediadevice.data.exception.NetworkConnectionException;
 import com.dftc.mediadevice.domain.Camera;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -32,67 +36,72 @@ import javax.inject.Singleton;
 @Singleton
 public class CameraDataMapper {
 
-  @Inject
-  CameraDataMapper() {}
+    private static final String TAG_START = "://";
+    private static final String TAG_END = "/";
+    private static final String TAG_PORT = ":";
 
-  /**
-   * Transform a {@link CameraInfomation} into an {@link Camera}.
-   *
-   * @param ai Object to be transformed.
-   * @return {@link Camera} if valid {@link CameraInfomation} otherwise null.
-   */
-  public Camera transform(CameraInfomation ai) {
-    Camera camera = null;
-    if (ai != null) {
+    @Inject
+    CameraDataMapper() {
+    }
 
-      int i, XAddrs_len = ai.deviceAddr.length();
-      int ip_start = -1, ip_end = -1;
-      int port_start = -1, port_end = -1;
-      for (i = 0; i < XAddrs_len; i++) {
-        if (ai.deviceAddr.charAt(i) == ':') {
-          if (ip_start == -1)
-            ip_start = i + 3;
-          else {
-            ip_end = i;
-            port_start = i + 1;
-          }
+    /**
+     * Transform a {@link CameraInfomation} into an {@link Camera}.
+     *
+     * @param ai Object to be transformed.
+     * @return {@link Camera} if valid {@link CameraInfomation} otherwise null.
+     */
+    public Camera transform(CameraInfomation ai) {
+        Camera camera = null;
+        if (ai != null && !TextUtils.isEmpty(ai.deviceAddr)) {
 
-        } else if (ai.deviceAddr.charAt(i) == '/') {
-          if (port_start != -1) {
-            port_end = i;
-            break;
-          }
+            try {
+                int ip_start = ai.deviceAddr.indexOf(TAG_START);
+                if (ip_start == -1)
+                    return null;
+
+                ip_start += TAG_START.length();
+                int ip_end = ai.deviceAddr.indexOf(TAG_END, ip_start);
+                if (ip_end == -1)
+                    ip_end = ai.deviceAddr.length();
+
+                String ipAddr = ai.deviceAddr.substring(ip_start, ip_end);
+
+                int port_start = ipAddr.indexOf(TAG_PORT);
+                Integer port = null;
+                if (port_start != -1) {
+                    try {
+                        port = Integer.parseInt(ipAddr.substring(port_start + TAG_PORT.length()));
+                    } catch (NumberFormatException e) {
+                        port = 8888;
+                        e.printStackTrace();
+                    }
+                    ipAddr = ipAddr.substring(0, port_start);
+                }
+                camera = new Camera(ipAddr, port, UUID.randomUUID().toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         }
-      }
-
-      int port = 8888;
-      try {
-        port = Integer.parseInt(ai.deviceAddr.substring(port_start, port_end));
-      } catch (NumberFormatException e) {
-        e.printStackTrace();
-      }
-
-      camera = new Camera(ai.deviceAddr.substring(ip_start, ip_end),
-              port, null);
+        return camera;
     }
-    return camera;
-  }
 
-  /**
-   * Transform a List of {@link CameraInfomation} into a Collection of {@link Camera}.
-   *
-   * @param cameraInfomationCollection Object Collection to be transformed.
-   * @return {@link Camera} if valid {@link CameraInfomation} otherwise null.
-   */
-  public List<Camera> transform(Collection<CameraInfomation> cameraInfomationCollection) {
-    final List<Camera> cameraList = new ArrayList<>();
-    for (CameraInfomation cameraInfomation : cameraInfomationCollection) {
-      final Camera camera = transform(cameraInfomation);
-      if (camera != null) {
-        cameraList.add(camera);
-      }
+    /**
+     * Transform a List of {@link CameraInfomation} into a Collection of {@link Camera}.
+     *
+     * @param cameraInfomationCollection Object Collection to be transformed.
+     * @return {@link Camera} if valid {@link CameraInfomation} otherwise null.
+     */
+    public List<Camera> transform(Collection<CameraInfomation> cameraInfomationCollection) throws NetworkConnectionException {
+        final List<Camera> cameraList = new ArrayList<>();
+        for (CameraInfomation cameraInfomation : cameraInfomationCollection) {
+            final Camera camera = transform(cameraInfomation);
+            if (camera != null) {
+                cameraList.add(camera);
+            }
+        }
+        if (cameraList.isEmpty())
+            throw new NetworkConnectionException();
+        return cameraList;
     }
-    return cameraList;
-  }
 }

@@ -46,7 +46,7 @@ public class CameraDataRepository implements CameraRepository {
     /**
      * Constructs a {@link CameraRepository}.
      *
-     * @param dataStoreFactory A factory to construct different data source implementations.
+     * @param dataStoreFactory       A factory to construct different data source implementations.
      * @param cameraEntityDataMapper {@link CameraDataMapper}.
      */
     @Inject
@@ -73,7 +73,7 @@ public class CameraDataRepository implements CameraRepository {
      * @param mainRate
      */
     @Override
-    public Observable<CameraDevice> cameraDevice(String cameraIP, int cameraPort, boolean mainRate) {
+    public Observable<CameraDevice> cameraDevice(String cameraIP, Integer cameraPort, boolean mainRate) {
         return cameraDataStore.cameraDevice(cameraIP, cameraPort, mainRate);
     }
 

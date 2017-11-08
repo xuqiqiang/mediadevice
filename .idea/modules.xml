@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MediaDevice.iml" filepath="$PROJECT_DIR$/MediaDevice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseview/baseview.iml" filepath="$PROJECT_DIR$/baseview/baseview.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/ijkplayer/ijkplayer.iml" filepath="$PROJECT_DIR$/ijkplayer/ijkplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/libonvif/libonvif.iml" filepath="$PROJECT_DIR$/libonvif/libonvif.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mediadevice.iml" filepath="$PROJECT_DIR$/mediadevice.iml" />
       <module fileurl="file://$PROJECT_DIR$/onvif/onvif.iml" filepath="$PROJECT_DIR$/onvif/onvif.iml" />
     </modules>
   </component>
